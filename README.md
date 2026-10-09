@@ -1,4 +1,4 @@
-# CUA QA Agent
+# CUA (Computer Using Agent): QA Agent
 
 **An AI tester that checks websites the way a QA engineer does.**
 
