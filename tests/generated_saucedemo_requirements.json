@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Login with valid credentials and verify product list",
+    "url": "https://www.saucedemo.com/",
+    "goal": "Type 'standard_user' in the username field, type 'secret_sauce' in the password field, and click the 'Login' button.",
+    "expected": "The Products page is displayed showing six products, each with an image, name, description, and price. The cart icon in the top right shows '0'."
+  },
+  {
+    "name": "Login with wrong password shows error",
+    "url": "https://www.saucedemo.com/",
+    "goal": "Type 'standard_user' in the username field, type 'wrong_password' in the password field, and click the 'Login' button.",
+    "expected": "The user remains on the login page and an error message is displayed indicating the username and password do not match any user in the system."
+  },
+  {
+    "name": "Login with locked out user shows specific error",
+    "url": "https://www.saucedemo.com/",
+    "goal": "Type 'locked_out_user' in the username field, type 'secret_sauce' in the password field, and click the 'Login' button.",
+    "expected": "The user remains on the login page and an error message is displayed stating 'Epic sadface: Sorry, this user has been locked out.'"
+  },
+  {
+    "name": "Add item to cart and verify cart count and button state",
+    "url": "https://www.saucedemo.com/",
+    "goal": "Log in with 'standard_user' and 'secret_sauce'. On the Products page, click the 'Add to cart' button for the first product (Sauce Labs Backpack).",
+    "expected": "The button for the first product changes to 'Remove'. The cart icon in the top right updates to show '1'."
+  },
+  {
+    "name": "Checkout with missing fields shows validation errors",
+    "url": "https://www.saucedemo.com/",
+    "goal": "Log in with 'standard_user' and 'secret_sauce'. Add one item to the cart. Click the cart icon to go to the Cart page. Click the 'Checkout' button. On the Checkout Information page, leave the First Name, Last Name, and Postal Code fields empty and click the 'Continue' button.",
+    "expected": "The user remains on the Checkout Information page and an error message is displayed stating 'Error: First Name is required' (or similar validation errors for the other fields)."
+  },
+  {
+    "name": "Complete checkout and verify thank you message",
+    "url": "https://www.saucedemo.com/",
+    "goal": "Log in with 'standard_user' and 'secret_sauce'. Add one item to the cart. Click the cart icon, then 'Checkout'. Fill in 'John' for First Name, 'Doe' for Last Name, and '12345' for Postal Code. Click 'Continue'. On the Overview page, click the 'Finish' button.",
+    "expected": "The Checkout: Complete page is displayed with the message 'Thank you for your order!'."
+  }
+]

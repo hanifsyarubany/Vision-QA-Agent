@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Sort products by price low to high",
+    "url": "https://www.saucedemo.com/",
+    "goal": "Log in as 'standard_user' / 'secret_sauce'. On the Products page, use the sort dropdown to sort by 'Price (low to high)'.",
+    "expected": "Products are listed in ascending price order; the cheapest item (Sauce Labs Onesie, $7.99) is first."
+  },
+  {
+    "name": "Remove item from cart",
+    "url": "https://www.saucedemo.com/",
+    "goal": "Log in as 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Bike Light' to the cart, open the cart, then remove the item.",
+    "expected": "The cart page is empty (no items listed)."
+  },
+  {
+    "name": "Scroll to footer and find social links",
+    "url": "https://www.saucedemo.com/",
+    "goal": "Log in as 'standard_user' / 'secret_sauce'. Scroll down to the bottom of the Products page.",
+    "expected": "The footer is visible showing Twitter, Facebook and LinkedIn links and a copyright line mentioning Sauce Labs."
+  },
+  {
+    "name": "Logout via menu",
+    "url": "https://www.saucedemo.com/",
+    "goal": "Log in as 'standard_user' / 'secret_sauce', open the hamburger menu, and click Logout.",
+    "expected": "User is returned to the login page."
+  },
+  {
+    "name": "Visual bugs with problem_user",
+    "url": "https://www.saucedemo.com/",
+    "goal": "Log in as 'problem_user' / 'secret_sauce' and inspect the Products page.",
+    "expected": "Every product shows its own correct product image (a backpack, a bike light, etc. matching the product names) with no visual defects."
+  }
+]

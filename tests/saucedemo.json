@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Valid login",
+    "url": "https://www.saucedemo.com/",
+    "goal": "Log in with username 'standard_user' and password 'secret_sauce'.",
+    "expected": "User lands on the Products inventory page showing a list of products."
+  },
+  {
+    "name": "Invalid login shows error",
+    "url": "https://www.saucedemo.com/",
+    "goal": "Try to log in with username 'standard_user' and password 'wrong_password'.",
+    "expected": "Login is rejected and an error message about username/password not matching is displayed. User stays on the login page."
+  },
+  {
+    "name": "Add to cart and verify",
+    "url": "https://www.saucedemo.com/",
+    "goal": "Log in as 'standard_user' / 'secret_sauce', add the 'Sauce Labs Backpack' to the cart, then open the cart.",
+    "expected": "The cart page lists exactly one item, 'Sauce Labs Backpack'."
+  },
+  {
+    "name": "Full checkout",
+    "url": "https://www.saucedemo.com/",
+    "goal": "Log in as 'standard_user' / 'secret_sauce', add any one product to the cart, and complete checkout using name 'Test User' and postal code '12345', finishing the order.",
+    "expected": "The order completes and a 'Thank you for your order' confirmation is shown."
+  }
+]

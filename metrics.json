@@ -1,0 +1,51 @@
+{
+  "_doc": "QC metric definitions. Edit thresholds here; no code changes needed. Only 'functional' can FAIL a run; every other category only WARNs.",
+  "release_gate": {
+    "functional_pass_rate": 0.90,
+    "note": "Suite passes the release gate when at least this share of runs pass functionally."
+  },
+  "warn_below": 80,
+  "grade_bands": {"A": 90, "B": 80, "C": 70, "D": 60},
+  "weights": {
+    "functional": 35,
+    "accessibility": 20,
+    "technical_health": 15,
+    "visual_quality": 10,
+    "responsive": 10,
+    "performance": 10,
+    "regression": 0
+  },
+  "functional": {
+    "pass_requires": {"task_completion": 80, "expected_result_met": 80}
+  },
+  "accessibility": {
+    "standard": "WCAG 2.1 AA",
+    "axe_tags": ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"],
+    "penalty_per_rule": {"critical": 15, "serious": 8, "moderate": 3, "minor": 1}
+  },
+  "technical_health": {
+    "penalty": {"js_error": 15, "failed_request_same_site": 10, "failed_request_third_party": 3, "broken_image": 15}
+  },
+  "responsive": {
+    "viewports": "mobile 375x667, tablet 768x1024, desktop 1280x720",
+    "note": "Each viewport with horizontal overflow costs an equal share of the score."
+  },
+  "performance": {
+    "standard": "Google Core Web Vitals / Lighthouse 'good' and 'poor' limits",
+    "limits": {
+      "fcp_ms": [1800, 3000],
+      "lcp_ms": [2500, 4000],
+      "load_ms": [3000, 6000],
+      "cls": [0.1, 0.25]
+    },
+    "tier_scores": {"good": 100, "needs_improvement": 60, "poor": 20},
+    "note": "Lab measurement from the test machine; run with --workers 1 for stable numbers."
+  },
+  "visual_quality": {
+    "note": "Judge-assessed (LLM): wrong/missing images, overlaps, misalignment, wrong labels. Subjective; treat as a warning."
+  },
+  "regression": {
+    "tolerance_pct": 1.0,
+    "note": "Only scored when run with --baseline compare. Weight is 0 by default (informational)."
+  }
+}

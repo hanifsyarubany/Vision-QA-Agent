@@ -1,0 +1,20 @@
+# Secrets: never commit your real API key. Share .env.example instead.
+.env
+.env.*
+!.env.example
+
+# Run outputs (recreated by every run of agent.py)
+results/
+baselines/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

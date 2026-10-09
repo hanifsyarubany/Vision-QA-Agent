@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Expected-fail wrong expectation",
+    "url": "https://www.saucedemo.com/",
+    "goal": "Log in as 'standard_user' / 'secret_sauce' and look at the Products page.",
+    "expected": "The Products page shows exactly 3 products and a 'Welcome back, Test User' banner."
+  },
+  {
+    "name": "Locked out user",
+    "url": "https://www.saucedemo.com/",
+    "goal": "Log in as 'locked_out_user' / 'secret_sauce'.",
+    "expected": "User reaches the Products inventory page."
+  }
+]

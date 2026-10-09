@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Homepage loads with key content",
+    "url": "https://sanctusfactory.com/u-aim/",
+    "goal": "Look at the homepage. Scroll down the page to the bottom, viewing the lab description, research areas, news and footer.",
+    "expected": "The page shows the lab name (Artificial Intelligence & Machine Learning Lab / U-AIM), a research description, research area cards (Physical AI, Agentic AI, Image/Video/Speech Diffusion), a News section, and a footer, with no broken layout or missing images."
+  },
+  {
+    "name": "Navigate to Research page",
+    "url": "https://sanctusfactory.com/u-aim/",
+    "goal": "Use the top navigation menu to open the 'Research' page.",
+    "expected": "A Research page opens (URL contains research) showing the lab's research areas content, with the same site header/navigation still visible."
+  },
+  {
+    "name": "Navigate to Publications page",
+    "url": "https://sanctusfactory.com/u-aim/",
+    "goal": "Use the top navigation menu to open the 'Publications' page (hover over or click 'Publications' and choose Conferences/Journals or International if a submenu appears).",
+    "expected": "A Publications page opens listing publications (paper titles/authors/venues)."
+  },
+  {
+    "name": "Navigate to Family members page",
+    "url": "https://sanctusfactory.com/u-aim/",
+    "goal": "Use the top navigation menu to open the 'Family' page (the lab members section, e.g. Professor).",
+    "expected": "A page opens showing the professor and/or lab members with names or photos."
+  },
+  {
+    "name": "Search works",
+    "url": "https://sanctusfactory.com/u-aim/",
+    "goal": "Use the site's Search box to search for the word 'diffusion' and submit the search.",
+    "expected": "A search results page appears listing results related to 'diffusion', or a clear 'no results' message. It must not show an error or blank page."
+  },
+  {
+    "name": "News section links to a news item",
+    "url": "https://sanctusfactory.com/u-aim/",
+    "goal": "Scroll to the News section on the homepage and click the 'Link' of the first news item.",
+    "expected": "The news item's detail page (or linked page) opens with readable content and no error page."
+  }
+]
